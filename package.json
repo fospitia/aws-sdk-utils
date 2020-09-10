@@ -1,6 +1,6 @@
 {
   "name": "aws-sdk-utils",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Utils for AWS SDK",
   "main": "index.js",
   "scripts": {
@@ -20,7 +20,7 @@
   "dependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fospitia/aws-sdk-utilsgit"
+    "url": "git+https://github.com/fospitia/aws-sdk-utils.git"
   },
   "bugs": {
     "url": "https://github.com/fospitia/aws-sdk-utils/issues"
