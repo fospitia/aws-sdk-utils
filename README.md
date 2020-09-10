@@ -1,10 +1,10 @@
-# AWS Utils for NodeJS
+# Utils for AWS SDK
 
 ## Installation
 
 ```shell script
 # NPM
-npm install awsutils --save
+npm install aws-sdk-utils --save
 
 ```
 
@@ -35,7 +35,7 @@ Like ddbBatchWrite but without limit of RequestItems.
 Get and Delete 1000 Items from dynamodb table with hash 'JobId' and range 'Id'.
 
 ```typescript
-const { ddbFind, ddbBatchWrites } = require('awsutils');
+const { ddbFind, ddbBatchWrites } = require('aws-sdk-utils');
 const AWS = require('aws-sdk');
 
 const client = new AWS.DynamoDB.DocumentClient();
