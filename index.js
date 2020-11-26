@@ -35,13 +35,10 @@ const ddbFind = async (client, params, acc = { Items: [], ScannedCount: 0 }) => 
     params.Limit -= data.Items.length;
   }
 
-  if (data.LastEvaluatedKey) {
-    if (params.Limit === undefined || params.Limit > 0) {
-      params.ExclusiveStartKey = data.LastEvaluatedKey;
-      await ddbFind(client, params, acc);
-    } else {
-      acc.LastEvaluatedKey = data.LastEvaluatedKey;
-    }
+  acc.LastEvaluatedKey = data.LastEvaluatedKey;
+  if (data.LastEvaluatedKey && params.Limit && params.Limit > 0) {
+    params.ExclusiveStartKey = data.LastEvaluatedKey;
+    await ddbFind(client, params, acc);
   }
 
   return acc;
